@@ -9,6 +9,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+# for m in genai.list_models():
+#    print(m.name)
 
 app = FastAPI()
 
@@ -38,7 +40,7 @@ async def generate_cards(file: UploadFile = File(...)):
             raise HTTPException(status_code=400, detail="PDF is empty or unreadable")
         
         # setup Gemini
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("models/gemini-2.5-flash")
         
         base_prompt = (
             "Pretend you are the best teacher in the world. Extract the most important concepts "

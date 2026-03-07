@@ -25,23 +25,19 @@
     <script>
             function start()
     {
-        // const para = document.createElement("p");
-        // const node = document.createTextNode("AHHHHHHH");
-        // para.appendChild(node);
+        //scrolling f1 car
         const element = document.getElementById("parent");
         const marquee = document.createElement('marquee');
         marquee.behavior = "scroll";
         marquee.direction = "left";
         marquee.scrollAmount = "12";
-        
         var img = document.createElement('img');
         img.width=100;
         img.src = 'f1-car.png';
         marquee.appendChild(img);
         element.append(marquee);
-        // element.appendChild(para);
-        // alert("AHHHHHHHaahahaha");
-        //hides elements with id "top"
+
+        //hide elements
         var top = document.getElementById("top");
         var bottom = document.getElementById("bottom");
 
@@ -55,9 +51,6 @@
             top.style.display = "none";
             bottom.style.display = "block";
         }
-        //shows flashcard
-
-
     }
 
     </script>

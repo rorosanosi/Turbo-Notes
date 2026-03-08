@@ -14,6 +14,10 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "Flashcard API is Online. Use the frontend to generate cards!"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -64,8 +68,3 @@ async def generate_cards(file: UploadFile = File(...)):
     except Exception as e:
         print(f"Error: {e}") # logging errors into terminal
         raise HTTPException(status_code=500, detail=str(e))
-    
-@app.get("/")
-def read_root():
-    return {"status": "Server is up and running!"}
-    

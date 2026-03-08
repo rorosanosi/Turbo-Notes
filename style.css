@@ -115,33 +115,51 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.nav-list {
-    width: 70%;
+/* Center the whole dashboard */
+.home-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh; /* Takes up full screen height */
+}
+
+.icon-grid {
+    display: flex;
     gap: 20px;
-    list-style: none;
-    overflow: hidden;
-    background-color: gray;
+    margin-top: 30px;
+}
+
+.icon-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border: 3px solid #333;
+    padding: 30px;
     text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.icon-card:hover {
+    transform: translateY(-5px);
+    background-color: #2196F3;
     color: white;
 }
-.nav-list a {
-  background-color: gray;
-  color: white;
-  text-decoration: none;
-  float: left;
-  overflow: hidden;
+
+.big-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
 }
-.nav-list a:hover{
-  overflow: hisswn;
-  background-color: black;
-  text-decoration: none;
-}
-.nav-list-container{
-  position: absolute;
-  margin: 20px;
-  width: auto;
+
+.custom-icon {
+    width: 64px;   /* Adjust this size to fit your icons */
+    height: 64px;
+    margin-bottom: 15px;
+    object-fit: contain; /* Keeps icon from stretching */
+    image-rendering: pixelated; /* Use this if your icons are pixel art! */
 }
 
 .center {

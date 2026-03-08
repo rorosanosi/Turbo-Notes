@@ -7,24 +7,25 @@
     <title>Home</title>
 </head>
 <body>
-    <style> body{
-  position: relative;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-image: url('pixil-frame-0-3.png');
-  background-size: 100% 100%;
-  z-index: -5;
-}
-</style>
-    <h1 class="center">Home</h1>
-    <div class = "nav-list-container">
-    <ul class="nav-list">
-        <li><a href="flashcards.html">View Flashcards</a></li>
-        <li><a href="createnew.html">Create New Flashcards</a></li>
-        <li><a href="settings.html">Settings</a></li>
-    </ul>
+    <div class="home-container">
+        <h1 class="center">Study Dashboard</h1>
+        
+        <div class="icon-grid">
+            <a href="createnew.html" class="icon-card">
+                <img src="create-icon.png" alt="Create" class="custom-icon">
+                <span>Create New</span>
+            </a>
+
+            <a href="flashcards.html" class="icon-card">
+                <img src="view-icon.png" alt="View" class="custom-icon">
+                <span>View Decks</span>
+            </a>
+
+            <a href="settings.html" class="icon-card">
+                <img src="settings-icon.png" alt="Settings" class="custom-icon">
+                <span>Settings</span>
+            </a>
+        </div>
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Turbo Notes
 
 ## Notes
-This project was created for the Durham University Women in Tech Hackathon 2016, in 24 hours :)
+This project was created for the Durham University Women in Tech Hackathon 2026, in 24 hours :)
 
 ## Inspiration
 Active recall and spaced repetition are scientifically proven to be the most effective study methods [1]. They already form the basis of many popular study tools like Quizlet and Anki. While accessed by many, these study tools are unfortunately not accessible to all students, specifically those with certain disabilities like visual impairments, dyslexia, motor impairments, or attention-related conditions that make traditional flashcard interfaces difficult to use. We also have a duty to be as inclusive as possible so all students get access to the best study methods.

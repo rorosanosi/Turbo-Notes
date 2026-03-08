@@ -89,3 +89,7 @@ if (generateBtn) {
     });
 }
 
+function openDeckPage() {
+    window.location.href = "deck.html"; 
+
+}

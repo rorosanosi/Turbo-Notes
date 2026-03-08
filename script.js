@@ -55,12 +55,12 @@ const pdfInput = document.getElementById('pdfUpload')
 
 if (generateBtn) {
     generateBtn.addEventListener('click', async() => {
-        if (!pdfInput.files[0] {
+        if (!pdfInput.files[0]) {
             alert("Please select a PDF file first!");
             return;
         }
     
-        const formData = new FormFata();
+        const formData = new FormData();
         formData.append("file", pdfInput.files[0]);
 
         generateBtn.value = "AI is thinking..."
@@ -76,7 +76,7 @@ if (generateBtn) {
 
             const data = await response.json();
 
-            localStorage.setItem('activeDeck', JSON.stringify(data.flascards));
+            localStorage.setItem('activeDeck', JSON.stringify(data.flashcards));
 
             window.location.href = "flashcards.html";
 
@@ -91,5 +91,4 @@ if (generateBtn) {
 
 function openDeckPage() {
     window.location.href = "deck.html"; 
-
 }

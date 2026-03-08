@@ -65,3 +65,7 @@ async def generate_cards(file: UploadFile = File(...)):
         print(f"Error: {e}") # logging errors into terminal
         raise HTTPException(status_code=500, detail=str(e))
     
+@app.get("/")
+def read_root():
+    return {"status": "Server is up and running!"}
+    

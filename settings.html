@@ -4,17 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Settings</title>
 </head>
 <body>
+<style> body{
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url('pixil-frame-0-3.png');
+  background-size: 100% 100%;
+  z-index: -5;
+}
+</style>
     <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
     </ul>
+    <div class = "middlebox">
     <h1>Settings</h1>
-    <!-- Rounded switch -->
+    <h2>Adjust for your preference</h2>
+    <h3>Light/dark mode</h3>
     <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
+        <input type="checkbox" id="modeToggle" onclick="myFunction()">
+        <span class="slider round"></span>
     </label>
+    <h3>Text to speech</h3>
+    <label class="switch">
+        <input type="checkbox" id="modeToggle" onclick="myFunction()">
+        <span class="slider round"></span>
+    </label>
+    <h3>Hands free</h3>
+    <label class="switch">
+        <input type="checkbox" id="modeToggle" onclick="myFunction()">
+        <span class="slider round"></span>
+    </label>
+    </div>
+
+    <script>
+        function myFunction() {
+            let element = document.body;
+            element.classList.toggle("dark");
+        }
+    </script>
 </body>
 </html>

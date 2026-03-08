@@ -5,7 +5,7 @@
 }
 body{
     background-color: #ffffff;
-    colour: #333333;
+    color: #333333;
     font-family: "Pixelify Sans", sans-serif;
 
 
@@ -40,7 +40,7 @@ button{
 
 .dark{
     background-color: #222;
-    colour: #e6e6e6;
+    color: #e6e6e6;
     font-family: "Pixelify Sans", sans-serif;
     background-image: url('pixil-frame-0-3.png');
 }

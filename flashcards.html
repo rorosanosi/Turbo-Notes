@@ -7,24 +7,32 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="home-container">
-        <h1 class="center">Study Dashboard</h1>
-        
-        <div class="icon-grid">
-            <a href="createnew.html" class="icon-card">
-                <img src="create-icon.png" alt="Create" class="custom-icon">
-                <span>Create New</span>
-            </a>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <h1>Flashcards</h1>
+    <section id="top">
+    <p>Select Deck To Revise:</p>
+    <div class="center">
+        <div class="container">
+        <img src="flashcardsbg.jpeg" alt="flashcardbg"  width="400" height="400">
+        <input class="btn" style="color:green;" type="button" onclick="start()" value="Go"/>
+        </div>
+    </div>
 
-            <a href="flashcards.html" class="icon-card">
-                <img src="view-icon.png" alt="View" class="custom-icon">
-                <span>View Decks</span>
-            </a>
+    <div id="stage">
+        <div id="car-container">
+            <img id="racecar" src="racecar.jpeg" alt="racecar!!">
+            <div class="card-text">Question 1</div> </div>
+    </div>
+    
+    </section>
+    <section id="parent">
+    </section>
 
-            <a href="settings.html" class="icon-card">
-                <img src="settings-icon.png" alt="Settings" class="custom-icon">
-                <span>Settings</span>
-            </a>
+    <div class="center">
+        <div style="height:120px;width:120px;overflow:auto;">
+            As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
         </div>
     </div>
 </body>

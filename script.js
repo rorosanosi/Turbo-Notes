@@ -51,7 +51,41 @@ document.addEventListener('keydown', (event)=> {
 
 // API for flashcard generation
 const generateBtn = document.getElementById('generateBtn');
-const notesInput = document.getElementById('notes');
-const cardGrid = document.getElementById('cardGrid');
+const pdfInput = document.getElementById('pdfUpload')
 
-const API_URL = "http://127.0.0.1:8000/generate";
+if (generateBtn) {
+    generateBtn.addEventListener('click', async() => {
+        if (!pdfInput.files[0] {
+            alert("Please select a PDF file first!");
+            return;
+        }
+    
+        const formData = new FormFata();
+        formData.append("file", pdfInput.files[0]);
+
+        generateBtn.value = "AI is thinking..."
+        generateBtn.disabled = true;
+
+        try {
+            const response = await fetch("http://127.0.0.1:8000/generate", {
+                method: "POST",
+                body: formData
+            });
+
+            if (!response.ok) throw new Error("failed to generate cards");
+
+            const data = await response.json();
+
+            localStorage.setItem('activeDeck', JSON.stringify(data.flascards));
+
+            window.location.href = "flashcards.html";
+
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Something went wrong. Make sure app.py is running!");
+            generateBtn.value = "Generate Deck";
+            generateBtn.disabled = false;
+        }
+    });
+}
+

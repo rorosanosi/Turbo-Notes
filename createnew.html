@@ -10,8 +10,27 @@
     <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
     </ul>
-    <h1>Create New Flashcards</h1>
-    <label>Upload Revision Notes</label>
-    <input type="file" id="notes" name="notes" accept=".pdf" />
+
+    <div class="container">
+        <h1>My Flashcard Decks</h1>
+        
+        <div id="deckContainer" class="deck-grid">
+            <div class="deck-card add-deck-btn" id="createNewDeck">
+                <div class="icon">➕</div>
+                <span>New Deck</span>
+            </div>
+        </div>
+
+        <hr> <div id="generatorSection" style="display:none;">
+            <h2 id="activeDeckTitle">Upload to Deck</h2>
+            <label>Upload Revision Notes (PDF only)</label>
+            <input type="file" id="notes" name="notes" accept=".pdf" />
+            <button id="generateBtn">Generate Flashcards</button>
+        </div>
+
+        <div id="cardGrid" class="card-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

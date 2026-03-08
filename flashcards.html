@@ -8,6 +8,17 @@
     <title>Home</title>
 </head>
 <body>
+        <style> body{
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url('pixil-frame-0-4.png');
+  background-size: 100% 100%;
+  z-index: -5;
+}
+</style>
     <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
     </ul>
@@ -16,14 +27,13 @@
     <p>Select Deck To Revise:</p>
     <div class="center">
         <div class="container">
-        <img src="pixil-frame-0-8.png" alt="flashcardbg"  width="400" height="400">
         <input class="btn" style="color:green;" type="button" onclick="showCard()" value="Go"/>
         </div>
     </div>
 
     <div id="stage">
         <div id="car-container">
-            <img id="racecar" src="racecar.jpeg" alt="racecar!!">
+            <img id="racecar" src="pixil-frame-0-8.png" alt="racecar!!">
             <div class="card-text">Question 1</div> </div>
     </div>
     
